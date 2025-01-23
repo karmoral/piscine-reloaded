@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karmoral <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 07:04:10 by karmoral          #+#    #+#             */
-/*   Updated: 2025/01/22 19:46:03 by karmoral         ###   ########.fr       */
+/*   Created: 2025/01/23 07:39:03 by karmoral          #+#    #+#             */
+/*   Updated: 2025/01/23 12:23:43 by karmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,24 @@
 
 void	ft_putchar(char c);
 
-void	ft_print_numbers(void)
-{
-	int	i;
-
-	i = '0';
-	while (i <= '9')
-	{
-		ft_putchar(i);
-		i++;
-	}
-}
-/*
-void ft_putchar(char c)
+/*void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-int main(void)
+*/
+int	main(int argc, char **argv)
 {
-	ft_print_numbers();
-	return(1);
-}*/
+	int	i;
+	int	j;
+	char	*str;
+	i = 0;
+	while (++i < argc)
+	{
+		j = -1;
+		str = argv[i];
+		while (str[++j] != '\0')
+			ft_putchar(str[j]);
+		ft_putchar('\n');
+	}
+	return (0);
+}

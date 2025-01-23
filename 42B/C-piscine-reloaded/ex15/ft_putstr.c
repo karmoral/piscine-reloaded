@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: karmoral <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 07:04:10 by karmoral          #+#    #+#             */
-/*   Updated: 2025/01/22 19:46:03 by karmoral         ###   ########.fr       */
+/*   Created: 2025/01/23 01:13:04 by karmoral          #+#    #+#             */
+/*   Updated: 2025/01/23 01:46:07 by karmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	ft_putchar(char c);
 
-void	ft_print_numbers(void)
+void	ft_putstr(char *str)
 {
-	int	i;
+	int		i;
+	char	pt;
 
-	i = '0';
-	while (i <= '9')
+	i = 0;
+	pt = str[i];
+	while (pt != '\0')
 	{
-		ft_putchar(i);
-		i++;
+		ft_putchar(pt);
+		pt = str [++i];
 	}
 }
 /*
@@ -31,8 +33,9 @@ void ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int main(void)
+int main()
 {
-	ft_print_numbers();
-	return(1);
+	char *str = "De nuevo aqui";
+	ft_putstr(str);
+	return (0);
 }*/

@@ -6,11 +6,13 @@
 /*   By: karmoral <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 07:21:37 by karmoral          #+#    #+#             */
-/*   Updated: 2025/01/21 08:41:20 by karmoral         ###   ########.fr       */
+/*   Updated: 2025/01/22 20:04:49 by karmoral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {
@@ -24,9 +26,14 @@ void	ft_is_negative(int n)
 	{
 		result = 'N';
 	}
-	write (1, &result, 1);
+	ft_putchar(result);
 }
 /*
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 int main(void)
 {
 	ft_is_negative(-42);
